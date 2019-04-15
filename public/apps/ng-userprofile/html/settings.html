@@ -1,0 +1,74 @@
+<style>
+        input.ng-pristine {
+            border-color:black;
+        }
+
+        input.ng-touched.ng-invalid {
+            border-color:#FFAAAA;
+            background-color: #FFEEEE;
+        }
+
+        input.ng-touched.ng-valid {
+            border-color:green;
+        }
+
+    </style>
+
+<div class="row alert alert-info">
+    <div class="col-sm-6 ">
+
+    <h4>
+
+
+
+
+
+
+
+              <div name="fn" ng-model="fn" class="glyphicon glyphicon-edit" ng-click="onFirstname()">
+              </div>
+                Firstname:{{data.firstname}}<br><br>
+                <input ng-model="firstname" ng-hide="fn" type="text" name="firstname" placeholder="{{data.firstname}}">
+                <button ng-click="update()" class = "btn-primary" ng-hide="fn" type="button" name="button">update</button><br>
+
+
+                <div name="ln" ng-model="ln" class="glyphicon glyphicon-edit" ng-click="onLastname()">
+                </div>
+                  Lastname:{{data.lastname}}<br><br>
+                  <input ng-model="lastname" ng-hide="ln" type="text" name="lastname" placeholder="{{data.lastname}}">
+                  <button ng-click="update()" class = "btn-primary" ng-hide="ln" type="button" name="button">update</button><br>
+
+                  <div name="em" ng-model="em" class="glyphicon glyphicon-edit" ng-click="onEmail()">
+                  </div>
+                    Email:{{data.email}}<br><br>
+                    <input ng-model="email" ng-hide="em" type="email" name="email" placeholder="{{data.email}}">
+                    <button ng-click="update()" class = "btn-primary"  ng-hide="em" type="button" name="button">update</button><br>
+
+
+                    <div name="mob" ng-model="mob" class="glyphicon glyphicon-edit" ng-click="onMob()">
+                    </div>
+                      Mobile no:{{data.mobileno}}<br><br>
+                      <input ng-model="mobileno" maxlength="10" pattern="[789][0-9]{9}" required autofocus ng-hide="mob" type="text" name="mob" placeholder="{{data.mobileno}}">
+                      <button ng-click="update()" class = "btn-primary" ng-hide="mob" type="button" name="button">update</button><br>
+
+
+
+
+</h4>
+
+
+    </div>
+    <div class="col-sm-6 ">
+      <h4>
+        Username:{{data.username}}<br><br><br>
+        <div name="pas" ng-model="pas" class="glyphicon glyphicon-edit" ng-click="onPas()">
+        </div>
+          Password:{{data.password}}<br><br>
+          <input ng-model="password"  required autofocus ng-hide="pas" type="text" name="mob" placeholder="{{data.password}}">
+          <button ng-click="update()" class = "btn-danger" ng-hide="pas" type="button" name="button">update</button><br>
+
+
+    </h4>
+
+    </div>
+</div>

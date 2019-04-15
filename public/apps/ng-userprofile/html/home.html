@@ -1,0 +1,31 @@
+
+
+<div ng-repeat = "page in data track by $index">
+  <div class="col-sm-4">
+              <ul class="list-group">
+                <li class ="list-group-item text-center "style = "background-color:#000000;color:#ffffff;">
+
+
+                    <h4>{{page}}</h4>
+
+
+                </li>
+                <li class="list-group-item">
+                    <img class="img-circle" src="/apps/games/{{page}}/splash.png" alt="" width="100%">
+                </li>
+                <li class="list-group-item text-center alert-warning">
+
+                  <img   game={{page}} name="like" width="40px"src={{img}} ng-click="myFunc($event)">
+
+
+                  <a href="/games?game={{page}}">
+                  <div class="btn btn-danger ">
+                  OPEN
+                  </div>
+                  </a>
+                </li>
+
+              </ul>
+  </div>
+
+</div>

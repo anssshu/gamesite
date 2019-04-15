@@ -1,0 +1,142 @@
+<!DOCTYPE HTML>
+<html>
+
+     {% include "templates/head.html" %}
+
+
+     <style>
+          .main-page {
+      background-color:white;
+        padding-top:60px;
+
+      }
+     </style>
+
+
+
+
+
+  <body class="main-page">
+    {% include "templates/header.html" %}
+
+
+
+      <div class="container-fluid">
+        <div class="row">
+
+          <div class="col-sm-5">
+            <div class="">
+
+
+                        <div name = "foo" class ="row text-center "style = "background-color:#000000;color:#ffffff;">
+                            <h4>{{game.name}}</h4>
+                        </div>
+
+                        <div class="row" >
+                          <img class = "img-thumbnail" src={{game.image}} alt="" width="100%" >
+                        </div>
+
+                        <div class="row text-center well" >
+                              <div class="col-sm-1">
+                                <img id="imgh"   name="{{game.fav}}" width="30px" src="{{game.fav}}.png" >
+                              </div>
+                              <script type="text/javascript">
+                                $("#imgh").click(function(event){
+
+                                  console.log("query",event.target.name);
+                                  if (event.target.name=="like") {
+                          					event.target.src="heart.png";
+                          					event.target.name="heart"
+                          					//post add to favourite request
+                                    $.post("/userprofile/addtofavourites",{
+                                      name:"{{game.name}}"
+                                    },
+                                    function(data,status){
+                                      console.log(data);
+                                    });
+                          				}
+
+                          				//remove from favourite
+                          				else {
+                          					//post remove from fav list
+                          					event.target.name="like"
+                          					event.target.src="like.png";
+                                    //$.post(URL,data,callback);
+                                    $.post("/userprofile/removefromfavourites",{
+                                      name:"{{game.name}}"
+                                    },
+                                    function(data,status){
+                                      console.log(data);
+                                    });
+                          				}
+                                });
+                              </script>
+
+                              <div class="col-sm-11">
+                                <form method="post" action="/userprofile/lastplayed">
+                                  <input name="name" value={{game.name}} type="hidden">
+                                  <button class ="btn btn-danger" type="submit">PlayGame</button>
+                                </form>
+                              </div>
+                        </div>
+            </div>
+
+                  <!--<a href={{game.path}}> -->
+
+
+      </div>
+
+ <!--end of first column inside fluid conatioer-->
+
+
+
+<!--            END OF     THE IMAGE ITEM WITH BUTTON      -->
+                    <div class="col-sm-7">
+
+                                  <ul class="list-group">
+                                    <li name = "foo" class ="list-group-item text-center "style = "background-color:#000000;color:#ffffff;">
+                                      <div class="">
+                                        <h4></h4>
+                                      </div>
+
+                                    </li>
+                                    <li class="list-group-item ">
+                                      <h3>About:{{game.name}}</h3>
+                                        <div class="well" ><pre>
+                                          <h5>
+            {{game.text}}
+
+
+          </h5></div>
+
+                                    </li>
+
+                                    <li class ="list-group-item text-center "style = "background-color:#000000;color:#fffaff;">
+                                      <div class="">
+
+                                      </div>
+
+                                    </li>
+
+
+                                  </ul>
+
+
+                    </div>
+
+          </div>
+
+        </div>
+
+
+
+
+
+
+
+    {% include "templates/footer.html" %}
+	</body>
+
+
+
+</html>

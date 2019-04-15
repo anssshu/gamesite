@@ -1,0 +1,21 @@
+//Define the crafty scene here
+
+//Srart of Scene
+Crafty.defineScene("MyGameScene",function(){
+    //create a background
+    Crafty.background("red");
+    Crafty.background("url(res/bg.svg)");
+    //add your game entities	
+  
+    Crafty.e("Hood");
+    Crafty.e("Tail");
+
+    var a=Crafty.e("Bat","RandMove");
+    Crafty.sprite(200,"res/mos.svg",{"mos":[0,0]});
+    
+   Crafty.e("DOM","2D","Color","SpriteAnimation","mos").attr({x:400,y:10})
+	.reel("play",100,0,0,4)
+	.animate("play",-1)
+	;
+     });//End of Scene
+

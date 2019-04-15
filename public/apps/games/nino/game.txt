@@ -1,0 +1,7 @@
+Nino is a platerformer game.
+  Nino has to collect all the fruits
+  and kill all the enemies.
+
+  All the enimies can be killed by
+  jumping on top of them.If an enemy touches
+  the player then player's health will decrease.

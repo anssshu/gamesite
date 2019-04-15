@@ -1,0 +1,16 @@
+this project
+ng-login -------entry point login apps---con---site home
+ng-success -------login success app this is the game profile home pages--con-login success
+ng-userprofile ----  thsis is the user profile apps ------con------myProfile
+game ---   for playing each game and one page for each game --con----individual game page
+
+
+every game should have an index.html file as entry point
+create a game.txt file inside every game folder in the public dir and an image named
+splash.png
+
+sothat the program will automaticaly generate a description page for the
+game created
+
+
+game data is inside models/apps/games/games.js

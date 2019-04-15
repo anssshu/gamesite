@@ -1,0 +1,43 @@
+
+<div class="col-sm-12">
+          <ul class="nav nav-tabs">
+
+                <li  class="{{data.cat == cat?'active':''}}"  ng-repeat = "cat in data.allcats">
+
+                  <a data-toggle="tab" href="#/catagories?cat={{cat}}">{{cat}}</a>
+                </li>
+
+
+
+          </ul><br>
+
+          <div class="tab-content">
+              <!--  include the contents here  -->
+
+              <div ng-repeat = "name in data.games">
+                <div class="col-sm-4">
+                            <ul class="list-group">
+                              <li class ="list-group-item text-center "style = "background-color:#000000;color:#ffffff;">
+                                <div class="">
+                                  <h4>{{name}}</h4>
+                                </div>
+
+                              </li>
+                              <li class="list-group-item">
+                                  <img class="img-circle" src="/apps/games/{{name}}/splash.png" alt="" width="100%">
+                              </li>
+                              <li class="list-group-item text-center alert-warning">
+                                <a href="/games?game={{name}}">
+                                <div class="btn btn-danger ">
+                                OPEN
+                                </div>
+                                </a>
+                              </li>
+
+                            </ul>
+                </div>
+
+              </div>
+            <!-- end of the game contents -->
+          </div>
+</div>

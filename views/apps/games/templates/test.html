@@ -1,0 +1,101 @@
+<!DOCTYPE HTML>
+<html>
+
+     {% include "templates/head.html" %}
+
+
+     <style>
+          .main-page {
+      background-color:white;
+        padding-top:60px;
+
+      }
+     </style>
+
+
+
+
+
+  <body class="main-page">
+    {% include "templates/header.html" %}
+
+
+
+      <div class="container-fluid">
+        <div class="row">
+
+          <div class="col-sm-5">
+            <ul class="list-group">
+              <li name = "foo" class ="list-group-item text-center "style = "background-color:#000000;color:#ffffff;">
+                <div class="">
+                  <h4>Nino</h4>
+                </div>
+
+              </li>
+              <li class="list-group-item" >
+                <img class = "img-thumbnail"src="/apps/games/nino/splash.png" alt="" width="100%" >
+              </li>
+              <li class="list-group-item text-center" >
+                  <a href="/games/nino/play"><div class ="btn btn-danger">PlayGame</div></a>
+              </li>
+           </ul>
+
+
+          </div>
+<!--            END OF     THE IMAGE ITEM WITH BUTTON      -->
+          <div class="col-sm-7">
+
+                        <ul class="list-group">
+                          <li name = "foo" class ="list-group-item text-center "style = "background-color:#000000;color:#ffffff;">
+                            <div class="">
+                              <h4></h4>
+                            </div>
+
+                          </li>
+                          <li class="list-group-item ">
+                            <h3>About:Nino</h3>
+                              <div class="well" ><pre>
+                                <h5>
+  Nino is a platerformer game.
+  Nino has to collect all the fruits
+  and kill all the enemies.
+
+  All the enimies can be killed by
+  jumping on top of them.If an enemy touches
+  the player then player's health will decrease.
+
+
+
+</h5></div>
+
+                          </li>
+
+                          <li class ="list-group-item text-center "style = "background-color:#000000;color:#fffaff;">
+                            <div class="">
+
+                            </div>
+
+                          </li>
+
+
+                        </ul>
+
+
+          </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+
+
+
+    {% include "templates/footer.html" %}
+	</body>
+
+
+
+</html>

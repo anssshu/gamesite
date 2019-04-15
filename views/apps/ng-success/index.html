@@ -1,0 +1,122 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+	<title>HOME</title>
+	<meta charset="utf-8">
+   	<meta name="viewport" content="width=device-width, initial-scale=1">
+        <!--angular lib-->
+	<script src="apps/ng-success/lib/angular.min.js"></script>
+	<script src="apps/ng-success/lib/angular-route.min.js"></script>
+
+	<!--jquery lib-->
+	<script src="apps/ng-success/lib/jquery-1.11.3.js"></script>
+
+	<!--bootstrap lib-->
+        <link href="apps/ng-success/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <link href="apps/ng-success/lib/bootstrap/css/bootstrap-theme.min.css" rel="stylesheet">
+        <script src="apps/ng-login/lib/bootstrap/js/bootstrap.min.js"></script>
+        <!--font awesome lib-->
+        <link href="apps/ng-success/lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+
+        <!--angular-application-scripts-->
+        <script src="apps/ng-success/ng-js/ng-success_c.js"></script>
+
+
+
+	 <style>
+	         body        {
+	 		      	background-color:black	;
+	 			padding-top:3px;
+
+	 			 }
+
+
+	 	.well	        {
+	 			background:white;
+	 			color:black;
+	 			}
+	 	.sidenav	{
+	 		      	background-color:white	;
+	 			padding-top:3px;
+
+	 			 }
+
+		.main-page {
+		 background-color:white;
+		 	padding-top:60px;
+
+		 }
+	 </style>
+
+
+    </head>
+
+	<body ng-app="App" >
+
+		<!--header-->
+        	<div ng-include="'apps/ng-success/html/header.html'"></div>
+
+					<style>
+					header {
+					  padding: 100px 0 100px;
+					}
+
+					@media (min-width: 992px) {
+					  header {
+					    padding: 100px 0 100px;
+					  }
+					}
+
+					section {
+					  padding: 100px 0;
+					}
+					</style>
+					<header class="bg-primary text-white">
+					     <div class="container text-center">
+					       <h1>Play Games</h1>
+
+
+					     </div>
+					</header>
+
+		<!--main page-->
+		<div class='main-page'>
+
+			<!-- include the side pane -->
+
+
+			<!--navigation bar    -->
+			  <div class="row content">
+			                    <div class="col-sm-3 sidenav ">
+
+			                      <ul class="nav nav-pills nav-stacked">
+															<li ng-controller = "SearchController">
+																	<input type="text" name="search_games" ng-model="search_games" class="form-control" placeholder="Search Games"  dl-enter-key="search()" required autofocus>
+															</li>
+			                        <li class="active"><a href="#/?page=newgames">New Games</a></li>
+			                        <li><a href="#/?page=topten">Top Ten</a></li>
+			                        <li><a href="#/catagories?cat=platformers">Catagories</a></li>
+			                        <li><a href="#/?page=allgames">All Games</a></li>
+
+			                      </ul><br>
+			                    </div>
+
+
+			<!--  end of navigation bar    -->
+
+								<div class = "col-sm-9">
+												<div class="row">
+															<ng-view></ng-view>
+												</div>
+								</div>
+		</div>
+	<!--  end of fluid container -->
+
+		<!--footer-->
+		<div ng-include="'apps/ng-success/html/footer.html'"></div>
+
+	</body>
+
+
+
+</html>

@@ -1,0 +1,15 @@
+Threre would be a spitting cobra
+
+user should be able to move it both forward and back word
+and change the angle of spitting and spit on targets
+
+target would be an annoying insect
+
+it should simply fly with change of  position and die when the cobra spits and tease when
+the cobra misses
+
+a back ground music
+fly music
+fly die music
+fly tease music
+
